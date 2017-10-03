@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PlatoModule } from './plato/plato.module'
@@ -13,7 +13,6 @@ import { PlatoModule } from './plato/plato.module'
     PlatoModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]  
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
