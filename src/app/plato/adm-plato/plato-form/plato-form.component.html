@@ -1,3 +1,19 @@
-<p>
-  plato-form works!
-</p>
+<form #miFrm="ngForm" novalidate>
+    <div class="form-group">
+    <label for="nombre">Nombre del plato</label>
+    <input type="text"
+            class="form-control" id="nombre" 
+            placeholder="Your full name"
+            name="nombre"
+            [ngModel]="plato.nombre"    >
+    </div>
+    <div>
+  <label>
+    <span>Precio</span>
+  </label> 
+    <input type="number"
+            placeholder="precio del plato"
+            name="precio"
+            [ngModel]="plato.precio"    >
+          </div>            
+</form>
