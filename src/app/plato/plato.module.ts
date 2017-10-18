@@ -4,6 +4,7 @@ import { AdmPlatoComponent } from './adm-plato/adm-plato.component';
 import { PlatoFormComponent } from './adm-plato/plato-form/plato-form.component';
 import { PlatoListComponent } from './adm-plato/plato-list/plato-list.component';
 import { FormsModule }   from '@angular/forms';
+import {PlatoServiceService} from './plato-service.service';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import { FormsModule }   from '@angular/forms';
     FormsModule
   ],
   declarations: [AdmPlatoComponent, PlatoFormComponent, PlatoListComponent],
+  providers:[PlatoServiceService],
   exports:[AdmPlatoComponent]
 })
 export class PlatoModule { }

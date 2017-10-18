@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {Plato} from '../../../shared/model/plato'
+import { Component, OnInit,ViewChild } from '@angular/core';
+import {NgForm} from '@angular/forms';
+import {Plato} from '../../../shared/model/plato';
+import {PlatoServiceService} from '../../plato-service.service';
 
 @Component({
   selector: 'app-plato-form',
@@ -8,15 +10,17 @@ import {Plato} from '../../../shared/model/plato'
 })
 export class PlatoFormComponent implements OnInit {
 
-  plato:Plato ={
-    nombre:"",
-    descripcion:"",
-    precio:0.0
-  };
-
-  constructor() { }
+  @ViewChild('miFrm') public platoForm: NgForm;
+  
+  constructor(private miServicio:PlatoServiceService) { }
 
   ngOnInit() {
   }
+
+  onCreatePlato(plato:Plato) {
+    console.log(plato);
+    this.miServicio.agregarPlato(plato);
+    this.platoForm.resetForm();
+  } 
 
 }

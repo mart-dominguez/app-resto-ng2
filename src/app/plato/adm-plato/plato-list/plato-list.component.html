@@ -1,3 +1,17 @@
-<p>
-  plato-list works!
-</p>
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let unPlato of listaPlatos; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{unPlato.nombre}}</td>
+        <td>{{unPlato.precio}}</td>
+    </tr>
+  </tbody>
+</table>
+<button (click)="refresh()">Refrescar</button>
