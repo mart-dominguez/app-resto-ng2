@@ -1,13 +1,18 @@
 /*
- * Dashboard
+ * Typography
  */
+h1 {
+  padding-bottom: 9px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
 
 /* Placeholders */
 .placeholders {
-    padding-bottom: 3rem;
-  }
+  padding-bottom: 3rem;
+}
   
-  .placeholder img {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
+.placeholder img {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
