@@ -1,8 +1,9 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <app-menu></app-menu>    
+    <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">      
+      <router-outlet></router-outlet>
+    </main>
+  </div>
 </div>
-<h2>Formulario para gestion del resto </h2>
-<app-adm-plato></app-adm-plato>
