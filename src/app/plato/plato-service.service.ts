@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import {Plato} from '../shared/model/plato'
-import { IPlatoService } from './iplato-service';
+import { PlatoAbstractService } from './plato-abstract-service';
 import { Observable } from 'rxjs/Rx'
 
 @Injectable()
-export class PlatoServiceService implements IPlatoService {
+export class PlatoServiceService extends PlatoAbstractService {
 
   private platos:Plato[]=[];
-  constructor() { }
+  constructor() {
+    super();
+   }
 
   agregarPlato(plato:Plato): Observable<any>{
     const nuevaLista = [ ...this.platos, plato ];    

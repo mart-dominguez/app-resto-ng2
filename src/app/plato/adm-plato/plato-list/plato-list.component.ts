@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Plato} from '../../../shared/model/plato';
-import { IPlatoService } from '../../iplato-service';
+import { PlatoAbstractService } from '../../plato-abstract-service';
 
 @Component({
   selector: 'app-plato-list',
@@ -10,7 +10,7 @@ import { IPlatoService } from '../../iplato-service';
 export class PlatoListComponent implements OnInit {
   public listaPlatos:Plato[]=[];
 
-  constructor(private miServicio:IPlatoService) { }
+  constructor(private miServicio:PlatoAbstractService) { }
 
   ngOnInit() {
     this.miServicio.getPlatos().subscribe((lista)=>{
