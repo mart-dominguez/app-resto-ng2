@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Plato} from '../shared/model/plato'
 import { PlatoAbstractService } from './plato-abstract-service';
-import { Observable } from 'rxjs/Rx'
+import { Observable } from 'rxjs/Rx';
+import { Subject } from 'rxjs/Subject';
+import 'rxjs';
 
 @Injectable()
 export class PlatoServiceService extends PlatoAbstractService {
@@ -31,5 +33,9 @@ export class PlatoServiceService extends PlatoAbstractService {
 
   actualizar(plato:Plato):Observable<any>{
     return Observable.empty();
+  }
+
+  getPlatosUpdated():Subject<Plato>{
+    return null;
   }
 }

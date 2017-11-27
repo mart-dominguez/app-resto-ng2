@@ -16,6 +16,11 @@ export class PlatoListComponent implements OnInit {
     this.miServicio.getPlatos().subscribe((lista)=>{
       this.listaPlatos=lista;
     });    
+    this.miServicio.getPlatosUpdated().subscribe(t => this.refresh());
+  }
+
+  ngOnDestroy() {
+    this.miServicio.getPlatosUpdated().unsubscribe();
   }
 
   refresh(){    

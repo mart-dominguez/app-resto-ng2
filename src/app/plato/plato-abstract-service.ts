@@ -2,6 +2,7 @@ import { Plato } from '../shared/model/plato';
 import { Observable } from 'rxjs/Observable'
 import { IPlatoService } from './iplato-service';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export abstract class PlatoAbstractService implements IPlatoService{
@@ -16,4 +17,5 @@ export abstract class PlatoAbstractService implements IPlatoService{
 
     abstract actualizar(plato:Plato): Observable<any>;
 
+    abstract getPlatosUpdated():Subject<Plato>;
 }
